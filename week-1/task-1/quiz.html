@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Quiz Form</title>
+    
+</head>
+<body>
+
+<header>
+    <h1> Quiz</h1>
+</header>
+
+<div class="quiz-container">
+    <h2>Answer the following questions:</h2>
+    <form >
+        <ol>
+            <!-- Question 1: Text input -->
+            <li>
+                <label for="q1"> What is your name?</label>
+                <input type="text" id="q1" name="q1" placeholder="Type your answer here">
+            </li>
+
+            <li>
+                <p> Who is your faviourite player?</p>
+                <input type="radio" id="sachin" name="q2" value="Mars">
+                <label for="sachin">Sachin</label><br>
+                <input type="radio" id="dhoni" name="q2" value="Venus">
+                <label for="dhoni">Dhoni</label><br>
+                <input type="radio" id="virat" name="q2" value="Jupiter">
+                <label for="virat">Virat</label>
+            </li>
+
+
+            <li>
+                <p>select your faviourite sport?</p>
+                <input type="checkbox" id="cricket" name="q3" value="Pacific Ocean">
+                <label for="cricket">cricket</label><br>
+                <input type="checkbox" id="football" name="q4" value="Atlantic Ocean">
+                <label for="football">Atlantic Ocean</label><br>
+                <input type="checkbox" id="hockey" name="q5" value="Indian Ocean">
+                <label for="hockey">Indian Ocean</label>
+            </li>
+        </ol>
+
+        <button type="submit">Submit Quiz</button>
+    </form>
+</div>
+
+</body>
+</html>
