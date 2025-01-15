@@ -23,6 +23,7 @@ nav {
     width: 100%;
     background-color: #333;
     padding: 10px 0;
+    z-index: 100;
     
 }
 
@@ -45,6 +46,7 @@ nav a:hover {
     border-radius: 5px;
 }
 
+
 section {
     width: 100vw; /* Full width of the viewport */
     height: calc(100vh - 150px); /* Full height minus the margin-bottom */
@@ -59,24 +61,31 @@ h1{
     color: #333;
     /* padding-top: 50px; */
     position: relative; 
-    top:130px;
+    top:110px;
 
 }
 
-h2 {
-    font-size: 2em;
-    margin-bottom: 30px;
+#home{
+    margin-top: 150px;
+    scroll-margin-top: 150px;
+    
 }
+
 
 #home .home-container {
     display: flex; 
     align-items: center; 
     justify-content: space-between; /* Create space between text and image */
-    gap: 20px; 
+    /* clip-path: ellipse(closest-side farthest-side); */
 }
 
 #home .home-text {
-    flex: 1; /*Allow the text to take up remaining space*/
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    line-height: 1.5em;
+  
+
 }
 
 
@@ -84,11 +93,40 @@ h2 {
     max-width: 350px; 
     border-radius: 50%; 
     object-fit: cover; /* Ensure the image fits well */
+    filter: drop-shadow(5px 5px 15px black)  
+}
+
+#resume {
+    width: 120px;
+    background-color:#333;
+    margin-top: 10px;
+    padding: 10px;
+    border: #333;
+    border-radius:5%;
+}
+
+#resume a{
+    text-decoration: none;
+    color:white
+}
+
+#resume:hover{
+
+    background-color: #575757;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+
+
 }
 
 
 /* ---------------------------------------- */
 
+h2 {
+    font-size: 2em;
+    margin-bottom: 30px;
+    text-align: center;
+}
 
 
 /* About Section */
@@ -108,13 +146,18 @@ h2 {
     line-height: 2em;
     justify-content: space-evenly;
     margin-right:10% ;
+    border:2px solid grey;
+    box-shadow: #333 8px 5px 5px;
+    padding: 25px;
+    text-align: justify;
+    align-items: center;
+    padding-top: 90px;
    
 }
 
-#para{
+#para {
     font-weight: 550;
     width: 100%;
-
 }
 #about li {
     /* list-style-type: none; */
@@ -122,12 +165,17 @@ h2 {
     width: 100%;
     margin-left: 10%;
     font-size: 16px;
-    /* margin: 5px 0; */
+}
+
+.slist{
+    border: 2px solid grey;
+    box-shadow: #333 -8px 5px 5px;
+    padding: 10%;
 }
 
 .skill{
     width: 100%;
-    margin-top: 1%;
+    margin: 3% auto 5% auto;
     display: flex;
     justify-content:space-between;
     gap: 0px;
@@ -137,6 +185,8 @@ h2 {
 .skill img{
     width: 150px; /* Set a consistent width */
     height: 150px; /* Set a consistent height */
-    object-fit: cover; 
+    object-fit: cover;
+    filter: drop-shadow(5px 5px 15px);
+    margin-top:3%
 }
 
