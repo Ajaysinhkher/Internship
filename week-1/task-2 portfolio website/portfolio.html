@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="portfolio.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
     <title>portfolio</title>
 </head>
 
@@ -63,6 +64,7 @@
             <img src="Images/c++.png" alt="c++-programming">
             <img src="Images/java.png" alt="java-programming">
             <img src="Images/java_script.png" alt="js-programming">
+            <img src="Images/sql.png" alt="sql">
         </div>
     </section>
 
@@ -71,69 +73,105 @@
     <!-- project section -->
     <section id="project">  
         <h2>Projects</h2>
-        <ol>
-            <li>
-                GoFood:
+        <div class="main">
+            <div class="p1">
+                <img src="Images/gofood1.png" alt="Gofood image" >
+                <h4>GoFood:</h4>
+                <h5>React.js, Node.js, MongoDB, CSS3, HTML5,Bootstrap</h5>
                 <p>
-                    React.js, Node.js, MongoDB, CSS3, HTML5,Bootstrap
+                    
                     <ul>
                         <li>GoFood is a scalable online food delivery platform enabling users to browse, order, and pay for meals online.</li>
                         <li>Implemented user-friendly features such as real-time menu browsing, search and filtering options, and order tracking.</li>
                     </ul>
                     
                 </p>
-                <img src="" alt="Gofood image" >
-            </li>
-            <li>Shopper
-                <p>React.js, Node.js, Express.js, MongoDB, CSS3, HTML5
+                
+            </div>
+            <div class="p2">
+                <img src="Images/gofood1.png" alt="shopper image" >
+                <h4>Shopper</h4>
+                <h5>React.js, Node.js, Express.js, MongoDB, CSS3, HTML5</h5>
+                <p>
                     <ul>
                        <li> Shopper is a E-commerce platform where users can buy latest fashion clothes as per there choice and
                         requirement.</li>
                         <li>The platform integrates modern web technologies and robust backend infrastructure to support high traffic</li>
                     </ul>
-                    <img src="" alt="shopper image" >
+                   
                 </p>
-            </li>
-            <li>Book Heaven
-                <p>React.js, Node.js, Express.js, MongoDB, CSS3, HTML5
+            </div>
+            <div class="p3">
+                <img src="Images/gofood1.png" alt="book image" >
+
+                <h4>Book Heaven</h4>
+                <h5>React.js, Node.js, Express.js, MongoDB, CSS3, HTML5</h5>
+                <p>
                     <ul>
                        <li> Designed and developed an E-commerce platform where user can buy books online.<br>The platform also included
                         payment gateway along with proper feedback and review system.</li>
                     </ul>
-                    <img src="" alt="book image" >
+                    
                 </p>
-            </li>
+            </div>
+
+            <!-- <div class="p4">
+                <img src="Images/gofood1.png" alt="Gofood image" >
+                <h4>GoFood:</h4>
+                <h5>React.js, Node.js, MongoDB, CSS3, HTML5,Bootstrap</h5>
+                <p>
+                    
+                    <ul>
+                        <li>GoFood is a scalable online food delivery platform enabling users to browse, order, and pay for meals online.</li>
+                        <li>Implemented user-friendly features such as real-time menu browsing, search and filtering options, and order tracking.</li>
+                    </ul>
+                    
+                </p>
+                
+            </div> -->
             
-        </ol>
+        
+        </div>
 
     </section>
-    <hr>
+
 
     <!-- contact section -->
     <section id="contact">
-
         <h2>Contact</h2>
-        <form>
-            <ol>
-                <li><label for="name">Enter Your Name:</label></li>
-                <input type="text" id="name" name="name" value="">
+       
+        <form class="query" action="" method="get">
+            
+            
+                <div class="">
+                <label for="name"></label>
+                <i class="uil uil-user" style="font-size: 25px;"></i>
+                <input type="text" id="name" name="name" value="" placeholder="Enter Name:">
+                </div> 
                 
-                <li><label for="mail">your mail id:</label> </li>
-                <input type="email" id="mail">
-                <li><label for="num">Enter your Number:</label></li>
-                <input type="tel" id="num" name="number" value="">
-                <li>
-                    
-                <input type="button" value="Submit">
+                <div>  
+                    <i class="uil uil-envelope-alt" style="font-size: 25px;"></i>
+                    <label for="mail"></label>
+                    <input type="email" id="mail" placeholder="Mail id:">
+                </div>
+                <div >  
+                    <i class="uil uil-comment-alt-message" style="font-size: 25px;"></i>
+                    <label for="msg"></label>
+                    <input type="text" id="msg" placeholder="Message:">
+                </div>
 
-                </li>
-                
-            </ol>
-    
+                <div>
+                    <i class="uil uil-phone-alt" style="font-size: 25px;"></i>
+                    <label for="num"></label>
+                    <input type="tel" id="num" name="number" value="" placeholder="Number:">        
+                </div>
+                <div>
+                     <input type="button" value="Submit" placeholder="Submit">            
+                </div>
         </form>
-        <p>For any kind of query or work requirement feel free to contact me on: </p>
+        <!-- <p>For any kind of query or work requirement feel free to contact me on: </p> -->
 
-        <table border="0" cellpadding="20">
+        <!-- <table border="0" cellpadding="20">
             <tr>
                 <td><img src="telephone.png" alt="telephone" width="30px" height="30px">9664604500</td>
                 <td></td>
@@ -146,7 +184,7 @@
                 <td><img src="twitter.png" alt="twitter" width="30" height="30"></td>
                 <td><i class="fa-brands fa-facebook" style="font-size: 1.2rem; color: blue;"></i></td>
             </tr>
-        </table>
+        </table> -->
         
 
     </section>  
@@ -159,5 +197,19 @@
 
 </section>
 
+<footer>
+    <div class="social_media_links">
+        <h4>Ajaysinh Kher</h4>
+        <div>
+            <i class="uil uil-phone">+91 9664604500</i>
+            <i class="uil uil-linkedin-alt"></i>
+            <i class="uil uil-github-alt"></i>
+        </div>
+        <div>
+            
+        </div>
+        
+    </div>
+</footer>
   
 </html>  
