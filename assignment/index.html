@@ -3,17 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="./src/input.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">    
     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    <title>Document</title>
+    <title>Ajaysinh Kher</title>
 
 </head>
 <body class="bg-white font-Poppins" >
-    <nav class="bg-gray-600 flex p-2 w-full justify-center text-base fixed">
+    <nav class="bg-gray-600 flex p-2 w-full justify-center text-base fixed z-50">
         <a href="#home" class="text-white no-underline mr-4 px-4 py-2 rounded hover:bg-gray-700 text-center" >Home</a>
         <a href="#about" class="text-white no-underline mr-4 px-4 py-2 rounded hover:bg-gray-700">About</a>
         <a href="#projects" class="text-white no-underline mr-4 px-4 py-2 rounded hover:bg-gray-700">Projects</a>
@@ -25,17 +27,17 @@
         <div class="w-full pl-20 md:w-1/2 mb-4 md:mb-0 pt-20">
             <h1 class="text-lg md:text-xl font-bold text-gray-900">Hi, I'm Ajaysinh Kher</h1>
             <p class="mt-4 tracking-wider text-justify">Welcome to my portfolio! I am a passionate and results-driven web developer specializing in creating dynamic and responsive websites. With a strong foundation in front-end technologies such as HTML, CSS, and JavaScript, and experience in modern frameworks and libraries like React and Tailwind CSS, I aim to build seamless user experiences.</p>
-            <button class=" bg-gray-600 border-solid border-2 border-gray-600 text-white rounded w-20 mt-4 p-1  hover:bg-gray-800 text-center hover:shadow-lg hover:shadow-gray-900 transition duration-300 "><a href="../images/AJAYSINH KHER1.pdf" download="My_resume.pdf">Resume</a></button> 
+            <button class=" bg-gray-600 border-solid border-2 border-gray-600 text-white rounded w-20 mt-4 p-1  hover:bg-gray-800 text-center hover:shadow-lg hover:shadow-gray-900 transition duration-300"><a href="./images/AJAYSINH KHER1.pdf" download="My_resume.pdf">Resume</a></button> 
            
         </div>
         <!-- Image Section -->
         <div class="w-full md:w-1/2 flex justify-center pt-20">
-            <img src="../images/profile.jpg" alt="profile_image" class="w-48 h-48 object-cover rounded-full md:w-64 md:h-64">
+            <img src="./images/profile.jpg" alt="profile_image" class="w-48 h-48 object-cover rounded-full md:w-64 md:h-64">
         </div>
     </section>
 
 
-    <section id="about" class="w-full flex scroll-mt-10  mt-20 bg-gray-50 font-mono p-20">
+    <section id="about" class="w-full flex scroll-mt-10  mt-20 bg-gray-50 font-Poppins p-20">
         <div class="flex-col flex-wrap justify-center p-16 w-full">
             <h1 class="text-xl font-bold text-gray-800 text-left mb-6">About Me</h1>
             <p class="leading-relaxed text-justify text-gray-700 tracking-wide">
@@ -58,31 +60,31 @@
             </div>
         </div>
 
-        <div class="w-full p-16 bg-gradient-to-r from-blue-50 to-indigo-100">
+        <div class="w-full p-16">
             <h2 class="text-xl font-bold text-center text-gray-800 mb-6">My Skills</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-8 justify-items-center mx-auto">
-                <div class="flex flex-col items-center bg-gradient-to-t from-orange-500 to-yellow-400 shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
+                <div class="flex flex-col items-center shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
                     <img src="https://sharon-yi.com/assets/icons/html.svg" class="w-16 h-16 mb-4" alt="HTML">
-                    <p class="font-semibold text-orange-600">HTML</p>
+                    <p class="font-semibold">HTML</p>
                 </div>
-                <div class="flex flex-col items-center bg-gradient-to-t from-blue-500 to-blue-400 shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
+                <div class="flex flex-col items-center shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
                     <img src="https://sharon-yi.com/assets/icons/javascript.svg" class="w-16 h-16 mb-4" alt="JavaScript">
                     <p class=" font-semibold">JavaScript</p>
                 </div>
-                <div class="flex flex-col items-center bg-gradient-to-t from-cyan-500 to-teal-400 shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
+                <div class="flex flex-col items-center shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
                     <img src="https://sharon-yi.com/assets/icons/react.svg" class="w-16 h-16 mb-4" alt="React">
                     <p class="font-semibold">React</p>
                 </div>
-                <div class="flex flex-col items-center bg-gradient-to-t from-red-500 to-pink-400 shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
-                    <img src="../images/c.svg" class="w-16 h-16 mb-4" alt="C">
+                <div class="flex flex-col items-center shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
+                    <img src="./images/c.svg" class="w-16 h-16 mb-4" alt="C">
                     <p class="text-lg font-semibold">C</p>
                 </div>
-                <div class="flex flex-col items-center bg-gradient-to-t from-green-500 to-lime-400 shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
-                    <img src="../images/c++.png" class="w-16 h-16 mb-4" alt="C++">
+                <div class="flex flex-col items-center shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
+                    <img src="./images/c++.png" class="w-16 h-16 mb-4" alt="C++">
                     <p class="font-semibold">C++</p>
                 </div>
-                <div class="flex flex-col items-center bg-gradient-to-t from-purple-500 to-indigo-400 shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
-                    <img src="../images/sql.png" class="w-16 h-16 mb-4" alt="SQL">
+                <div class="flex flex-col items-center shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
+                    <img src="./images/sql.png" class="w-16 h-16 mb-4" alt="SQL">
                     <p class="font-semibold">SQL</p>
                 </div>
             </div>
@@ -93,13 +95,13 @@
     </section>
     
 
-    <section id="projects" class="w-full scroll-mt-12  bg-gray-100  mt-20 p-20" >
+    <section id="projects" class="w-full scroll-mt-12  bg-gray-100  mt-20 p-20 font-Poppins" >
         <h1 class="text-xl font-bold text-center mb-8 pt-5">Projects</h1>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 md:px-16">
 
             <!-- Project 1 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="../images/gofood.png" alt="Project 1" class="w-full h-48 object-cover">
+                <img src="./images/gofood.png" alt="Project 1" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold mb-2">GoFood</h2>
                     <p class="text-gray-700 text-sm mb-4">
@@ -110,7 +112,7 @@
             </div>
             <!-- Project 2 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="../images/shopper.png" alt="Project 2" class="w-full h-48 object-cover">
+                <img src="./images/shopper.png" alt="Project 2" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold mb-2">Shopper</h2>
                     <p class="text-gray-700 text-sm mb-4">
@@ -122,7 +124,7 @@
             </div>
             <!-- Project 3 -->
             <div class="bg-white shadow-lg rounded-lg overflow-hidden">
-                <img src="../images/book.png" alt="Project 3" class="w-full h-48 object-cover">
+                <img src="./images/book.png" alt="Project 3" class="w-full h-48 object-cover">
                 <div class="p-6">
                     <h2 class="text-xl font-semibold mb-2">Book Heaven</h2>
                     <p class="text-gray-700 text-sm mb-4">
@@ -135,32 +137,32 @@
     </section>
    
 
-   <section id="contact" class="w-full py-0 bg-gradient-to-r from-teal-100 to-white flex gap-5 mt-20 scroll-mt-12 p-20">
+   <section id="contact" class="w-full py-0 flex gap-5 mt-20 scroll-mt-12 p-20 font-Poppins">
     
     <!-- Left Container: Get in Touch Section -->
     <div class="w-full md:w-1/2 bg-white shadow-xl rounded-lg p-8">
 
         <div class="flex justify-center gap-4">
-            <i class="uil uil-phone text-teal-500 text-2xl" ></i>
+            <i class="uil uil-phone text-2xl" ></i>
             <div>
-                <p class="text-teal-500 font-medium ">Contact</p>
-                <p class="text-gray-700 md:col-span-1">+91 9664604500</p>
+                <p class="font-medium ">Contact</p>
+                <p class="md:col-span-1">+91 9664604500</p>
             </div>
         </div>
 
         <div class="flex justify-center gap-4 py-12">
-            <i class="uil uil-envelope-alt text-teal-500 text-2xl p-4 " ></i>
+            <i class="uil uil-envelope-alt text-2xl " ></i>
             <div>
-                <p class="text-teal-500 font-medium">Email</p>
-                <p class="text-gray-700 md:col-span-1">+91 9664604500</p>
+                <p class="font-medium">Email</p>
+                <p class="md:col-span-1">+91 9664604500</p>
             </div>
         </div>
 
         <div class="flex justify-center gap-4">
-            <i class="uil uil-map-marker text-teal-500 text-2xl p-4" ></i>
+            <i class="uil uil-map-marker text-2xl" ></i>
             <div>
-                <p class="text-teal-500 font-medium ">Address</p>
-                <p class="text-gray-700 md:col-span-1">+91 9664604500</p>
+                <p class="font-medium ">Address</p>
+                <p class="md:col-span-1">+91 9664604500</p>
             </div>
         </div>
 
@@ -195,7 +197,7 @@
     
 
     <!-- Right Container: Contact Form Section -->
-    <div class="w-full md:w-1/2 bg-white shadow-xl rounded-lg p-8">
+    <div class="w-full md:w-1/2 bg-white shadow-xl rounded-lg p-8 font-Poppins">
         <h3 class="text-2xl font-semibold text-gray-800 mb-6">Send a Message</h3>
         <form action="#" method="POST" class="space-y-6">
             <div>
