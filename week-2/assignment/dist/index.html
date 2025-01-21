@@ -13,14 +13,14 @@
 
 </head>
 <body class="bg-white font-Poppins" >
-    <nav class="bg-gray-600 flex p-2 w-full justify-center text-base fixed">
+    <nav class="bg-gray-600 flex p-2 w-full justify-center text-base fixed z-50">
         <a href="#home" class="text-white no-underline mr-4 px-4 py-2 rounded hover:bg-gray-700 text-center" >Home</a>
         <a href="#about" class="text-white no-underline mr-4 px-4 py-2 rounded hover:bg-gray-700">About</a>
         <a href="#projects" class="text-white no-underline mr-4 px-4 py-2 rounded hover:bg-gray-700">Projects</a>
         <a href="#contact" class="text-white no-underline px-4 py-2 rounded hover:bg-gray-700">Contact</a>
     </nav>
 
-    <section id="home" class="flex flex-wrap items-center justify-center w-full md:px-8 lg:px-16 pt-6 overflow-hidden">
+    <section id="home" class="flex flex-wrap items-center justify-center w-full md:px-8 lg:px-16 pt-6 overflow-hidden font-Poppins">
         <!-- Text Section -->
         <div class="w-full pl-20 md:w-1/2 mb-4 md:mb-0 pt-20">
             <h1 class="text-lg md:text-xl font-bold text-gray-900">Hi, I'm Ajaysinh Kher</h1>
@@ -35,10 +35,10 @@
     </section>
 
 
-    <section id="about" class="w-full flex scroll-mt-10  mt-20 bg-gray-50 font-mono p-20">
+    <section id="about" class="w-full flex scroll-mt-10  mt-20 bg-gray-50 font-Poppins p-20">
         <div class="flex-col flex-wrap justify-center p-16 w-full">
             <h1 class="text-xl font-bold text-gray-800 text-left mb-6">About Me</h1>
-            <p class="leading-relaxed text-justify text-gray-700 tracking-wide">
+            <p class="leading-relaxed text-justify text-gray-700 tracking-wider">
                 I am a <strong>Software Engineer</strong> with a strong interest in web development. I enjoy creating intuitive and visually appealing web applications that provide excellent user experiences. My journey in programming began with curiosity about how websites work and has since evolved into a passion for building functional and dynamic web solutions.
             </p>
             
@@ -58,26 +58,26 @@
             </div>
         </div>
 
-        <div class="w-full p-16 bg-gradient-to-r from-blue-50 to-indigo-100">
+        <div class="w-full p-16 font-Poppins">
             <h2 class="text-xl font-bold text-center text-gray-800 mb-6">My Skills</h2>
             <div class="grid grid-cols-2 md:grid-cols-3 gap-8 justify-items-center mx-auto">
-                <div class="flex flex-col items-center bg-gradient-to-t from-orange-500 to-yellow-400 shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
+                <div class="flex flex-col items-center shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
                     <img src="https://sharon-yi.com/assets/icons/html.svg" class="w-16 h-16 mb-4" alt="HTML">
-                    <p class="font-semibold text-orange-600">HTML</p>
+                    <p class="font-semibold ">HTML</p>
                 </div>
-                <div class="flex flex-col items-center bg-gradient-to-t from-blue-500 to-blue-400 shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
+                <div class="flex flex-col items-center shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
                     <img src="https://sharon-yi.com/assets/icons/javascript.svg" class="w-16 h-16 mb-4" alt="JavaScript">
                     <p class=" font-semibold">JavaScript</p>
                 </div>
-                <div class="flex flex-col items-center bg-gradient-to-t from-cyan-500 to-teal-400 shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
+                <div class="flex flex-col items-center shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
                     <img src="https://sharon-yi.com/assets/icons/react.svg" class="w-16 h-16 mb-4" alt="React">
                     <p class="font-semibold">React</p>
                 </div>
-                <div class="flex flex-col items-center bg-gradient-to-t from-red-500 to-pink-400 shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
+                <div class="flex flex-col items-center shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
                     <img src="../images/c.svg" class="w-16 h-16 mb-4" alt="C">
                     <p class="text-lg font-semibold">C</p>
                 </div>
-                <div class="flex flex-col items-center bg-gradient-to-t from-green-500 to-lime-400 shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
+                <div class="flex flex-col items-center shadow-lg rounded-lg p-6 hover:scale-105 transform transition duration-300">
                     <img src="../images/c++.png" class="w-16 h-16 mb-4" alt="C++">
                     <p class="font-semibold">C++</p>
                 </div>
@@ -93,7 +93,7 @@
     </section>
     
 
-    <section id="projects" class="w-full scroll-mt-12  bg-gray-100  mt-20 p-20" >
+    <section id="projects" class="w-full scroll-mt-12  bg-gray-100  mt-20 p-20 font-Poppins" >
         <h1 class="text-xl font-bold text-center mb-8 pt-5">Projects</h1>
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 md:px-16">
 
@@ -201,21 +201,21 @@
             <div>
                 <label for="name" class="block text-sm font-medium text-gray-600"></label>
                 <input type="text" id="name" name="name" placeholder="Enter your name"
-                    class="w-full bg-blue-100 p-2 focus:outline-none focus:ring-2 focus:ring-teal-500 mb-2 h-10" />
+                    class="w-full bg-blue-100 p-2 focus:outline-none focus:ring-2 mb-2 h-10" />
             </div>
             <div>
                 <label for="email" class="block text-sm font-medium text-gray-600"></label>
                 <input type="email" id="email" name="email" placeholder="Enter your email"
-                    class="w-full  bg-blue-100 p-2 focus:outline-none focus:ring-2 focus:ring-teal-500 mb-2" />
+                    class="w-full  bg-blue-100 p-2 focus:outline-none focus:ring-2 mb-2" />
             </div>
             <div>
                 <label for="message" class="block text-sm font-medium text-gray-600"></label>
                 <textarea id="message" name="message" rows="4" placeholder="Your message"
-                    class="w-full  bg-blue-100 p-2 focus:outline-none focus:ring-2 focus:ring-teal-500 mb-2"></textarea>
+                    class="w-full  bg-blue-100 p-2 focus:outline-none focus:ring-2  mb-2"></textarea>
             </div>
 
             <button type="submit"
-                class="p-2 font-family-poppins bg-blue-200 rounded-lg hover:bg-teal-600 focus:outline-none focus:ring-2 focus:ring-teal-500">
+                class="p-2 font-family-poppins bg-blue-200 rounded-lg hover:bg-blue-600 ">
                 Send Message
             </button>
         </form>
