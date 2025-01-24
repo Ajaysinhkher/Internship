@@ -13,11 +13,16 @@
 </head>
 <body class="bg-white font-Poppins">
     <nav class="navbar">
+        <button class="nav-toggle"><i class="uil uil-bars"></i></button>
         <a href="#home" class="nav-link">Home</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#projects" class="nav-link">Projects</a>
         <a href="#contact" class="nav-link">Contact</a>
+        <!-- <i class="uil uil-brightness toggle"></i> -->
     </nav>
+
+  
+    
 
     <section id="home" class="section home-section">
         <div class="text-section">
@@ -104,8 +109,8 @@
             <div class="project">
                 <img src="./images/book.png" alt="Book Heaven">
                 <div class="project-info">
-                    <h2>Book Heaven</h2>
-                    <p>Designed and developed an E-commerce platform where users can buy books online. users can also provide feedbacks.</p>
+                    <h2 id="p-3">Book Heaven</h2>
+                    <p class="book">Designed and developed an E-commerce platform where users can buy books online. users can also provide feedbacks.</p>
                     <a href="#">View Details</a>
                 </div>
             </div>
@@ -138,11 +143,15 @@
         </div>
         <div class="contact-form">
             <h3>Send a Message</h3>
-            <form action="#" method="POST">
+            <form action="" method="">
                 <input type="text" name="name" placeholder="Enter your name">
+                <span id="name-error" class="error-message"></span>
                 <input type="email" name="email" placeholder="Enter your email">
+                <span id="email-error" class="error-message"></span>
                 <textarea name="message" placeholder="Your message"></textarea>
+                <span id="message-error" class="error-message"></span>
                 <button type="submit">Send Message</button>
+                <!-- <span id="showerror"></span> -->
             </form>
         </div>
     </section>
@@ -160,5 +169,7 @@
             <p>&copy; 2025 Ajaysinh Kher. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="index.js"></script>
 </body>
 </html>

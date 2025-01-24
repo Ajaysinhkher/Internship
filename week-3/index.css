@@ -95,6 +95,10 @@ a:hover {
     box-shadow: none; 
 }
 
+
+
+/* ----------------------------------------------------------- */
+
 /* Navbar Styling */
 .navbar {
     position: fixed;
@@ -102,9 +106,73 @@ a:hover {
     width: 100%;
     background-color: #333;
     display: flex;
+    justify-content: center; /* Align items with space between */
+    align-items: center; /* Center items vertically */
+    padding: 10px 20px;
+    z-index: 1000;
+}
+
+.nav-link {
+    color: #fff;
+    margin: 0 15px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    background-color: #007BFF;
+    color: #fff;
+}
+
+/* Toggle Button Styling */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .nav-link {
+        display: none;
+    }
+
+    .nav-toggle {
+        display: block; /* Show toggle button */
+    }
+
+    .nav-link.show {
+        display: block; /* Show links when toggle is active */
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .navbar {
+        flex-direction: column; 
+        align-items: flex-start; 
+    }
+    .navbar a {
+        font-size: small;
+    }
+}
+/*--------------------------------------------------------  */
+
+/* Navbar Styling */
+/* .navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333;
+    display: flex;
     justify-content: center;
     padding: 10px 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     z-index: 1000;
 }
 
@@ -120,7 +188,7 @@ a:hover {
 .nav-link:hover {
     background-color: #007BFF;
     color: #fff;
-}
+} */
 
 /* For devices with a max width of 768px */
 @media (max-width: 768px) {
@@ -215,14 +283,14 @@ a:hover {
     padding: 15px 20px;
     border-radius: 8px;
     text-align: center;
-    
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
 }
 
 .stat p {
     font-size: 1rem;
     font-weight: bold;
     color: #007BFF;
-    text-align:center;
+    text-align: center;
 }
 
 .stat span {
@@ -363,6 +431,11 @@ font-size: 1.5rem;
 .project-info a:hover {
     color: red;
 }
+
+#p-3{
+    margin-top: 32px;
+}
+
 
 /* Responsive Design for Project Section */
 
@@ -617,7 +690,6 @@ font-size: 1.5rem;
 @media (max-width: 768px) {
     .footer {
         padding: 15px 0;
-        
     }
 
     .footer-content {
@@ -662,3 +734,21 @@ font-size: 1.5rem;
         gap: 30px; 
     }
 }
+
+.error-message{
+    color:red;
+    font-size: 0.9rem;
+}
+
+.toggle{
+    color: white;
+    padding: 10px 15px;
+    font-size: 1rem;
+}
+
+
+
+
+
+
+
