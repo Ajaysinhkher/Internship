@@ -158,6 +158,14 @@ tr:hover {
     background: #f0f2f5;
 }
 
+
+#groupStats{
+    
+    font-size: medium;
+    line-height: 1.5rem;
+
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .container {

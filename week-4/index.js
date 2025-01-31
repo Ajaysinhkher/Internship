@@ -59,6 +59,8 @@ $(document).ready(function () {
                   <td> <button class="delete-expense" expense-index="${index}">Delete</button></td>
                   </tr>`);
     });
+
+    groupWiseExpense();
   }
 
   //   function to get total expense:
@@ -68,11 +70,69 @@ $(document).ready(function () {
     expense.forEach((element) => {
       total_amount += parseInt(element.amount);
     });
-    console.log(total_amount);
+    // console.log(total_amount);
     $("#totalExpense p span").text(total_amount);
   }
 
-  //   function to get monthly highest expense:
+  //   function to get monthly highest expense and current month expense:
+
+function highestExpense(){
+  let amount_array= [];
+  let max_amount = 0; 
+  let Monthly_expense = 0;
+  let currentMonth = new Date().getMonth();
+  let currentYear  = new Date().getFullYear();
+
+  expense.forEach((element)=>{
+    let expenseDate = new Date(element.date)
+
+    if(expenseDate.getMonth() === currentMonth && expenseDate.getFullYear() === currentYear)
+    {
+      amount_array.push(parseInt(element.amount));
+    }
+  }) 
+
+  for(let i=0;i<amount_array.length;i++)
+  {
+    if(amount_array[i]>max_amount)
+    {
+      max_amount = amount_array[i];
+    }
+    Monthly_expense += amount_array[i];
+  }
+
+  $('#highestExpense p span').text(max_amount);
+  $('#monthlyExpense p span').text(Monthly_expense);
+  // console.log(max_amount);
+  
+}
+
+
+// function to get group wise total expense:
+
+function groupWiseExpense(){
+  
+  let groupExpense = {};
+  $('#groupStats').empty(); 
+  expense.forEach(expense => {
+    if(!groupExpense[expense.group]){
+      groupExpense[expense.group] = [];
+    }
+    groupExpense[expense.group].push(expense);
+  })
+
+  for(let group in groupExpense)
+  {
+    let grouplist  = groupExpense[group];
+    let groupTotal = grouplist.reduce((total, exp) => total + parseFloat(exp.amount), 0);
+    $('#groupStats').append(`
+      <ul>
+      <b>${group}:</b>
+      <span> Total exense: ${groupTotal}</span>
+      </ul>`)
+  }
+}
+  
 
   // function to add new group:
   $("#addGroup").on("click", function () {
@@ -106,12 +166,15 @@ $(document).ready(function () {
     $("#groupName").val(""); //clear input
   });
 
+  
   renderGroups(); //for rendering already stored groups
+
 
   // function  to add expense:
 
   $("#addExpense").on("click", function () {
     let exp_name = $("#expenseName").val().trim();
+    selectedDate = $('#expenseDate').val();
     if (exp_name === "") return alert("enter a valid expense name");
 
     let exp_grp = $("#groupSelect").val().trim();
@@ -131,7 +194,7 @@ $(document).ready(function () {
       group: exp_grp,
       name: exp_name,
       amount: exp_amount,
-      date: new Date().toISOString(),
+      date: new Date(selectedDate).toISOString(),
     };
 
     expense.push(exp);
@@ -143,10 +206,15 @@ $(document).ready(function () {
     $("#expenseAmount").val("");
     $("#expenseDate").val("");
     totalexpense();
+    highestExpense();
+   
+    
   });
 
   renderExpense();
   totalexpense();
+  highestExpense();
+
 
   //function to delete group and associated expenses:
   $(document).on("click", ".delete-group", function () {
@@ -172,6 +240,9 @@ $(document).ready(function () {
       renderExpense();
       renderGroups();
       totalexpense();
+      highestExpense();
+     
+     
     }
   });
 
@@ -193,6 +264,7 @@ $(document).ready(function () {
       // Re-render the expense list
       renderExpense();
       totalexpense();
+      highestExpense();
     }
   });
 });
