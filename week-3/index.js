@@ -40,9 +40,6 @@ document.addEventListener("DOMContentLoaded", () => {
             alert("Form submitted successfully!");
             form.reset();
         }
-
-
-
     });
 });
 

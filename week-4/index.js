@@ -12,7 +12,7 @@ $(document).ready(function () {
       hour: "2-digit",
       minute: "2-digit",
       hour12: true,
-    };
+    }; 
     return new Date(date).toLocaleString("en-US", options);
   }
 
@@ -63,7 +63,7 @@ $(document).ready(function () {
     groupWiseExpense();
   }
 
-  //   function to get total expense:
+  // function to get total expense:
   function totalexpense() {
     let total_amount = 0;
 
@@ -118,6 +118,7 @@ function groupWiseExpense(){
     if(!groupExpense[expense.group]){
       groupExpense[expense.group] = [];
     }
+    // push expense inside the group present in groupexpense:
     groupExpense[expense.group].push(expense);
   })
 
@@ -175,7 +176,8 @@ function groupWiseExpense(){
   $("#addExpense").on("click", function () {
     let exp_name = $("#expenseName").val().trim();
     selectedDate = $('#expenseDate').val();
-    if (exp_name === "") return alert("enter a valid expense name");
+ 
+   if (exp_name === "") return alert("enter a valid expense name");
 
     let exp_grp = $("#groupSelect").val().trim();
     // console.log(exp_grp);
@@ -188,9 +190,9 @@ function groupWiseExpense(){
       return;
     }
 
-    // creating a expense data object:
+  // creating a expense data object:
 
-    let exp = {
+      let exp = {
       group: exp_grp,
       name: exp_name,
       amount: exp_amount,
@@ -240,26 +242,23 @@ function groupWiseExpense(){
       renderExpense();
       renderGroups();
       totalexpense();
-      highestExpense();
-     
-     
+      highestExpense();  
     }
   });
 
-  // function to delete th expense:
+  // function to delete the expense:
 
   $(document).on("click", ".delete-expense", function () {
     let index = $(this).attr("expense-index"); // Use attr() instead of data()
     index = parseInt(index); // Convert to number
 
     if (!isNaN(index) && index >= 0) {
-      let expenseToDelete = expense[index];
-
-      // Remove the expense from the array
+      
+    // Remove the expense from the array
       expense.splice(index, 1);
 
       // Update localStorage
-      localStorage.setItem("expense", JSON.stringify(expense));
+      localStorage.setItem("expense", JSON.stringify(expense)); 
 
       // Re-render the expense list
       renderExpense();
