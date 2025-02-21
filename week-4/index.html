@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense Tracker</h1>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section class="dashboard">
+            <h2>Dashboard</h2>
+            <div class="dashboard-stats">
+                <div id="totalExpense" class="stat-card">
+                    <h3>Total Expense</h3>
+                    <p>₹<span>0.00</span></p>
+                </div>
+                <div id="monthlyExpense" class="stat-card">
+                    <h3>This Month</h3>
+                    <p>₹<span>0.00</span></p>
+                </div>
+                <div id="highestExpense" class="stat-card">
+                    <h3>Highest This Month</h3>
+                    <p>₹<span>0.00</span></p>
+                </div>
+            </div>
+            <div class="group-stats">
+                <h3>Group-wise Expenses</h3>
+                <div id="groupStats" class="stats-list"></div>
+            </div>  
+        </section>
+
+        <!-- Group Management Section -->
+        <section class="group-section">
+            <h2>Manage Groups</h2>
+            <div class="form-container">
+                <input type="text" id="groupName" placeholder="Enter group name" required>
+                <button id="addGroup">Add Group</button>
+            </div>
+            <div class="list-container">
+                <table id="groupList">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Created At</th>
+                            <th>Updated At</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <!-- to render the table body -->
+                    <tbody></tbody>
+
+                </table>
+            </div>
+        </section>
+
+        <!-- Expense Management Section -->
+        <section class="expense-section">
+            <h2>Manage Expenses</h2>
+            <div class="form-container">
+                <select id="groupSelect"required>
+                    <option value="" >Select Group</option>
+                </select>
+                <input type="text" id="expenseName" placeholder="Expense name" required>
+                <input type="number" id="expenseAmount" placeholder="Amount" step="0.01" required>
+                <input type="date" id="expenseDate" required>
+                <button id="addExpense">Add Expense</button>
+            </div>
+            <div class="list-container">
+                <table id="expenseList">
+                    <thead>
+                        <tr>
+                            <th>Group</th>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
+
